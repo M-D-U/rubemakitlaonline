@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>About Us | Rubben Makitla</title>
+  <!-- site icon -->
+  <link rel="icon" type="image/png" href="../src/rm_logo-transparent.png">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    crossorigin="anonymous"
+  />
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tailwind Config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Poppins', 'sans-serif'],
+          },
+          colors: {
+            brandBlue: '#1E3A8A',
+            brandGold: '#C9A227',
+            brandGrey: '#6B7280'
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Animations -->
+  <style>
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    .fade-up.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .fade-in {
+      opacity: 0;
+      transition: opacity 0.8s ease-out;
+    }
+    .fade-in.show {
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body class="font-sans text-brandGrey bg-white">
+
+  <!-- ================= HEADER ================= -->
+  <header class="fixed inset-x-0 top-0 z-50 bg-white/90 backdrop-blur shadow-sm">
+    <nav class="flex items-center justify-between p-6 lg:px-12 max-w-7xl mx-auto">
+
+      <!-- Logo -->
+      <a href="../index.html">
+        <img src="../src/rm_logo-transparent.png" class="h-10" alt="Rubben Makitla Logo">
+      </a>
+
+      <!-- Desktop Menu -->
+      <div class="hidden lg:flex gap-x-10">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link font-semibold text-brandBlue">About Us</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="projects.html" class="nav-link ">Projects</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <div class="lg:hidden">
+        <button id="openMobileMenu" type="button" aria-label="Open menu" title="Open menu"
+          class="text-2xl text-brandBlue">
+          <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
+      </div>
+
+    </nav>
+  </header>
+
+  <!-- ================= MOBILE MENU ================= -->
+  <div id="mobileMenu" class="fixed inset-0 z-50 hidden">
+
+    <!-- Overlay -->
+    <div id="menuOverlay" class="absolute inset-0 bg-black/50"></div>
+
+    <!-- Slide Panel -->
+    <div
+      class="absolute right-0 top-0 h-full w-64 bg-white shadow-lg p-6 transform translate-x-full transition-transform duration-300"
+      id="mobilePanel">
+
+      <div class="flex justify-between items-center mb-8">
+        <h2 class="text-lg font-semibold text-brandBlue">Menu</h2>
+        <button id="closeMobileMenu" type="button" aria-label="Close menu" title="Close menu"
+          class="text-2xl text-brandBlue">
+          <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <nav class="flex flex-col gap-6 text-brandGrey font-medium">
+        <a href="../index.html">Home</a>
+        <a href="about.html" class="text-brandBlue font-semibold">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html" >Projects</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </div>
+  <!-- Hero -->
+  <section class="pt-40 pb-24 bg-gray-50">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      <h1 class="fade-up text-4xl sm:text-5xl font-bold text-brandBlue mb-6">
+        About Rubben Makitla Pty Ltd
+      </h1>
+      <p class="fade-up max-w-3xl mx-auto text-lg">
+        Delivering sustainable industrial solutions through integrity,
+        innovation, and long-term partnerships.
+      </p>
+    </div>
+  </section>
+
+  <!-- Who We Are -->
+  <section class="py-20">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+
+      <div class="fade-up">
+        <h2 class="text-3xl font-bold text-brandBlue mb-6">Who We Are</h2>
+        <p class="mb-4">
+          At <strong>Rubben Makitla Pty Ltd</strong>, our culture is built on collaboration,
+          innovation, and sustainability. We empower our team to contribute ideas
+          that improve safety, productivity, and environmental responsibility.
+        </p>
+        <p>
+          Our client-focused approach ensures tailored, high-quality solutions
+          across dust suppression, logistics, lubricants, and machinery services.
+        </p>
+      </div>
+
+      <div class="fade-up bg-white p-8 rounded-2xl shadow-lg">
+        <ul class="space-y-5">
+          <li class="flex gap-4">
+            <i class="fa-solid fa-leaf text-brandGold text-xl mt-1"></i>
+            Eco-conscious operations
+          </li>
+          <li class="flex gap-4">
+            <i class="fa-solid fa-handshake text-brandGold text-xl mt-1"></i>
+            Trusted long-term partnerships
+          </li>
+          <li class="flex gap-4">
+            <i class="fa-solid fa-industry text-brandGold text-xl mt-1"></i>
+            Expertise in challenging environments
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Our Journey -->
+  <section class="fade-in py-20 bg-gray-50">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      <h2 class="fade-up text-3xl font-bold text-brandBlue mb-8">Our Journey</h2>
+      <div class="space-y-6">
+        <p>
+          Founded in 2019, Rubben Makitla Pty Ltd was established to address
+          the impact of dust, logistics inefficiencies, and inadequate lubrication
+          on industrial productivity and safety.
+        </p>
+        <p>
+          Through innovation and industry expertise, we developed solutions
+          that improve operational efficiency while protecting the environment.
+        </p>
+        <p>
+          Today, we continue to grow as a trusted partner delivering sustainable,
+          high-performance services across South Africa.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission & Vision -->
+  <section class="py-20">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12">
+
+      <div class="fade-up bg-white p-8 rounded-2xl shadow-lg hover:-translate-y-1 transition">
+        <h3 class="text-2xl font-bold text-brandBlue mb-4">Our Mission</h3>
+        <p>
+          To deliver innovative and sustainable industrial solutions that
+          prioritize efficiency, environmental responsibility, and community growth.
+        </p>
+      </div>
+
+      <div class="fade-up bg-white p-8 rounded-2xl shadow-lg hover:-translate-y-1 transition">
+        <h3 class="text-2xl font-bold text-brandBlue mb-4">Our Vision</h3>
+        <p>
+          To lead the industry through excellence, innovation, and responsible
+          growth—building a cleaner and safer future.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Core Values -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="fade-up text-3xl font-bold text-brandBlue mb-12 text-center">
+        Our Core Values
+      </h2>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="fade-up value-card"><i class="fa-solid fa-scale-balanced"></i><h4>Integrity</h4><p>Trust & transparency</p></div>
+        <div class="fade-up value-card"><i class="fa-solid fa-users"></i><h4>Customer Focus</h4><p>Tailored solutions</p></div>
+        <div class="fade-up value-card"><i class="fa-solid fa-lightbulb"></i><h4>Innovation</h4><p>Continuous improvement</p></div>
+        <div class="fade-up value-card"><i class="fa-solid fa-award"></i><h4>Quality</h4><p>Reliable excellence</p></div>
+        <div class="fade-up value-card"><i class="fa-solid fa-leaf"></i><h4>Sustainability</h4><p>Eco-friendly growth</p></div>
+        <div class="fade-up value-card"><i class="fa-solid fa-people-group"></i><h4>Teamwork</h4><p>Shared success</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-brandBlue text-white py-8 text-center">
+    <p class="text-sm">© 2026 Rubben Makitla Pty Ltd. All rights reserved.</p>
+  </footer>
+
+  <!-- ================= SCRIPTS ================= -->
+  <script src="../pages/main.js"></script>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      once: true,
+      duration: 900,
+      easing: 'ease-out-cubic'
+    });
+  </script>
+
+  <!-- Scroll Animation Script -->
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.fade-up, .fade-in').forEach(el => observer.observe(el));
+  </script>
+
+  <!-- Reusable styles -->
+  <style>
+    .nav-link {
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    .nav-link:hover { color: #1E3A8A; }
+
+    .value-card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,.08);
+      transition: transform .3s, box-shadow .3s;
+    }
+    .value-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(0,0,0,.12);
+    }
+    .value-card i {
+      color: #C9A227;
+      font-size: 2rem;
+      margin-bottom: .75rem;
+    }
+  </style>
+
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Rubben Makitla</title>
+<!-- site icon -->
+  <link rel="icon" type="image/png" href="../src/rm_logo-transparent.png">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    crossorigin="anonymous" />
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Poppins', 'sans-serif'],
+          },
+          colors: {
+            brandBlue: '#1E3A8A',
+            brandGold: '#C9A227',
+            brandGrey: '#6B7280'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="font-sans text-brandGrey bg-white">
+
+<!-- ================= HEADER ================= -->
+<header class="fixed inset-x-0 top-0 z-50 bg-white/90 backdrop-blur shadow-sm">
+  <nav class="flex items-center justify-between p-6 lg:px-12 max-w-7xl mx-auto">
+
+    <a href="../index.html">
+      <img src="../src/rm_logo-transparent.png" class="h-10" alt="Logo">
+    </a>
+
+    <div class="hidden lg:flex gap-x-10">
+      <a href="../index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="services.html">Services</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html" class="font-semibold text-brandBlue">Contact</a>
+    </div>
+
+    <div class="lg:hidden">
+      <button id="openMobileMenu" type="button" aria-label="Open menu" title="Open menu"
+          class="text-2xl text-brandBlue">
+          <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
+    </div>
+
+  </nav>
+</header>
+
+<!-- ================= MOBILE MENU ================= -->
+<div id="mobileMenu" class="fixed inset-0 z-50 hidden">
+
+  <div id="menuOverlay" class="absolute inset-0 bg-black/50"></div>
+
+  <div id="mobilePanel"
+    class="absolute right-0 top-0 h-full w-64 bg-white shadow-lg p-6 transform translate-x-full transition-transform duration-300">
+
+    <div class="flex justify-between items-center mb-8">
+      <h2 class="text-lg font-semibold text-brandBlue">Menu</h2>
+      <button id="closeMobileMenu" type="button" aria-label="Close menu" title="Close menu"
+          class="text-2xl text-brandBlue">
+          <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+    </div>
+
+    <nav class="flex flex-col gap-6 text-brandGrey font-medium">
+      <a href="../index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="services.html">Services</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html" class="text-brandBlue font-semibold">Contact</a>
+    </nav>
+  </div>
+</div>
+
+<!-- ================= HERO ================= -->
+<section class="pt-36 pb-20 px-6 bg-gray-50">
+  <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
+    <h1 class="text-4xl sm:text-5xl font-bold text-brandBlue">
+      Get in Touch
+    </h1>
+    <p class="mt-6 text-lg leading-8">
+      We’re ready to assist with dust suppression, transport logistics,
+      industrial lubricants, and plant machinery support.
+    </p>
+  </div>
+</section>
+
+<!-- ================= CONTACT SECTION ================= -->
+<section class="py-24">
+  <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16">
+
+    <div>
+      <h2 class="text-3xl font-bold text-brandBlue">Contact Information</h2>
+
+      <div class="mt-10 space-y-6">
+        <p><strong>Phone:</strong> 081 029 7553</p>
+        <p><strong>Email:</strong> Rubbenmakitla@gmail.com</p>
+        <p><strong>Address:</strong><br>
+          Yzervarkfontein 467 JR Farm (Hookai)<br>
+          Kwamhlanga, 1022
+        </p>
+      </div>
+    </div>
+
+    <div class="bg-white border rounded-2xl shadow-sm p-8">
+      <h3 class="text-2xl font-semibold text-brandBlue mb-6">
+        Send Us a Message
+      </h3>
+
+      <form class="space-y-6">
+        <input type="text" placeholder="Full Name" required
+          class="w-full border rounded-md p-3">
+        <input type="email" placeholder="Email Address" required
+          class="w-full border rounded-md p-3">
+        <textarea rows="5" placeholder="Message"
+          class="w-full border rounded-md p-3"></textarea>
+
+        <button type="submit"
+          class="w-full bg-brandBlue text-white py-3 rounded-md font-semibold hover:bg-indigo-900 transition">
+          Send Message
+        </button>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<footer class="border-t py-6 text-center text-sm">
+  © 2026 Rubben Makitla Pty Ltd. All rights reserved.
+</footer>
+
+<script src="../pages/main.js"></script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    once: true,
+    duration: 900
+  });
+</script>
+
+</body>
+</html>
