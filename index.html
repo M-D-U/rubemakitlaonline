@@ -48,17 +48,17 @@
   <nav class="flex items-center justify-between p-6 lg:px-12 max-w-7xl mx-auto">
 
     <!-- Logo -->
-    <a href="index.html">
+    <a href="/">
       <img src="src/rm_logo-transparent.png" class="h-10 max-w-full" alt="Logo">
     </a>
 
     <!-- Desktop Menu -->
     <div class="hidden lg:flex gap-x-10 font-medium">
-      <a href="index.html" class="text-brandBlue font-semibold">Home</a>
-      <a href="pages/about.html" class="hover:text-brandBlue transition">About Us</a>
-      <a href="pages/services.html" class="hover:text-brandBlue transition">Services</a>
-      <a href="pages/projects.html" class="hover:text-brandBlue transition">Projects</a>
-      <a href="pages/contact.html" class="hover:text-brandBlue transition">Contact</a>
+      <a href="/" class="text-brandBlue font-semibold">Home</a>
+      <a href="/about" class="hover:text-brandBlue transition">About Us</a>
+      <a href="/services" class="hover:text-brandBlue transition">Services</a>
+      <a href="/projects" class="hover:text-brandBlue transition">Projects</a>
+      <a href="/contact" class="hover:text-brandBlue transition">Contact</a>
     </div>
 
     <!-- Mobile Button -->
@@ -101,43 +101,58 @@
 
     <!-- Links -->
     <nav class="flex flex-col gap-6 text-lg font-medium">
-      <a href="index.html" class="text-brandBlue font-semibold">Home</a>
-      <a href="pages/about.html" class="hover:text-brandBlue transition">About Us</a>
-      <a href="pages/services.html" class="hover:text-brandBlue transition">Services</a>
-      <a href="pages/projects.html" class="hover:text-brandBlue transition">Projects</a>
-      <a href="pages/contact.html" class="hover:text-brandBlue transition">Contact</a>
+      <a href="/" class="text-brandBlue font-semibold">Home</a>
+      <a href="/about" class="hover:text-brandBlue transition">About Us</a>
+      <a href="/services" class="hover:text-brandBlue transition">Services</a>
+      <a href="/projects" class="hover:text-brandBlue transition">Projects</a>
+      <a href="/contact" class="hover:text-brandBlue transition">Contact</a>
     </nav>
 
   </div>
 </div>
 
 <!-- ================= HERO ================= -->
-<section class="relative px-6 pt-36 pb-28">
+<section class="relative px-6 pt-36 pb-28 text-white">
+
+  <!-- Background Image -->
+  <div class="absolute inset-0 -z-10">
+    <img 
+      src="src/dominik-vanyi-Mk2ls9UBO2E-unsplash.jpg" 
+      alt="Mining and construction operations"
+      class="w-full h-full object-cover"
+    >
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-black/60"></div>
+  </div>
+
+  <!-- Content -->
   <div class="mx-auto max-w-4xl text-center" data-aos="fade-up">
-    <h1 class="text-4xl sm:text-6xl font-bold tracking-tight text-brandBlue">
+    <h1 class="text-4xl sm:text-6xl font-bold tracking-tight">
       Sustainable Solutions for Mining, Construction & Logistics
     </h1>
 
-    <p class="mt-8 text-lg leading-8">
+    <p class="mt-8 text-lg leading-8 text-gray-200">
       Rubben Makitla Pty Ltd delivers reliable and sustainable solutions in
-      <span class="font-semibold text-gray-800">dust suppression, transport logistics,
+      <span class="font-semibold text-white">dust suppression, transport logistics,
         industrial lubricants</span>, and
-      <span class="font-semibold text-gray-800">yellow plant machinery</span>,
+      <span class="font-semibold text-white">yellow plant machinery</span>,
       supporting safe and efficient operations in demanding environments.
     </p>
 
     <div class="mt-12 flex justify-center gap-6 flex-wrap">
-      <a href="pages/services.html"
-        class="rounded-lg bg-brandBlue px-8 py-3 text-sm font-semibold text-white shadow hover:bg-blue-900 transition">
+      <a href="services.html"
+        class="rounded-lg bg-brandBlue px-8 py-3 text-sm font-semibold text-white shadow hover:opacity-90 transition">
         View Our Services
       </a>
-      <a href="pages/about.html"
-        class="text-sm font-semibold text-brandBlue hover:underline">
+      <a href="about.html"
+        class="text-sm font-semibold text-white hover:underline">
         Learn More →
       </a>
     </div>
   </div>
+
 </section>
+
 
 <!-- ================= ABOUT PREVIEW ================= -->
 <section class="py-24 bg-gray-50">
@@ -220,7 +235,7 @@
           to your operational needs.
         </p>
 
-        <a href="pages/contact.html"
+        <a href="/contact"
            class="inline-block mt-10 rounded-lg bg-brandBlue px-10 py-3 text-sm font-semibold text-white shadow hover:bg-indigo-900 transition">
           Contact Us
         </a>
@@ -245,6 +260,5 @@
     duration: 800
   });
 </script>
-
 </body>
 </html>
